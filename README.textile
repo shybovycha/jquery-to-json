@@ -1,0 +1,34 @@
+h1. jQuery to JSON
+
+h2. Description
+
+This utilitie converts jQuery object given (notely, form, HTML element or any other jQuery object) to a JSON object.
+
+h2. Example
+
+Given a form...
+
+bc.. <form onsubmit="return false;" action="#">
+    <textarea name="comment[body]"></textarea>
+    <input type="submit" value="Create comment">
+    <input type="button" value="Cancel" class="add-comment-cancel">
+</form>
+
+p. ...filled with this data...
+
+bc.. comment[body] = moofoo
+
+p. Executing this JavaScript code...
+
+bc.. console.log(jQuery('form').toJSON());
+
+p. ...will provide you with this JSON object:
+
+bc.. { comment: { body: "moofoo" } }
+
+h2. Usage
+
+bc.. jQuery(selector).toJSON();
+    
+p. See "LICENSE":http://github.com/shybovycha/jquery-to-json/blob/master/LICENSE
+
